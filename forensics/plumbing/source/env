@@ -1,0 +1,3 @@
+APP_ENV=production
+LOG_LEVEL=info
+AES_KEY=THIS_IS_AES_KEY!

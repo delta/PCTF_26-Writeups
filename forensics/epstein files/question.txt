@@ -1,0 +1,4 @@
+You are provided with a PDF file related to an ongoing investigation. The document appears complete, but not everything is as it seems.
+
+Analyze the file carefully and recover the hidden flag.
+!!! flag format : pctf{...}

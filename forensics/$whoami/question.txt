@@ -1,0 +1,14 @@
+An internal investigation flagged an anomalous access event involving a restricted internal resource.
+The activity blends in with routine network traffic and appears to have relied on valid credentials, rather than exploiting a software flaw.
+
+A packet capture was taken during the suspected time window.
+
+Your task is to analyze the capture and determine:
+
+The identity of the account responsible for the access
+
+The credentials used during the incident
+
+Only one account successfully reached the restricted resource.
+
+flag format: p_ctf{username:password}
