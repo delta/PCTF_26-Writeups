@@ -1,0 +1,21 @@
+During a security audit of a custom cryptographic module, you obtain partial diagnostic logs from a faulty randomness subsystem.
+
+The subsystem maintains an internal 128-bit state derived from AES, which is periodically inspected for integrity using bit-rotation consistency checks.
+
+For specific, preconfigured rotation offsets k, the firmware records the value:
+
+S ⊕ ROTR(S, k)
+
+where S is the internal state at that time. These checks are intended only to verify hardware wiring correctness and were never meant to be exposed.
+
+Due to a logging misconfiguration, only a small subset of these diagnostic frames was captured before the system crashed.
+
+Given: 
+
+-Several leaked diagnostic frames of the form S ⊕ ROTR(S, k)
+
+-The corresponding rotation offsets k
+
+-A ciphertext encrypted using the internal state
+
+Reconstruct the state and recover the flag.

@@ -1,0 +1,15 @@
+The Joker left only one thing at the crime scene this time:
+a single file named smile.bin.
+
+No threats, no riddles, no recordings — just that one file and a smear of blood on the wall that read:
+
+“A joke’s only funny when you get it.”
+
+GCPD’s cyber forensics division believes the file contains a hidden message, but every attempt to inspect it has turned up nothing but noise, corruption, and formats that make no sense together.
+It’s almost as if the Joker stitched different pieces of evidence into one corpse of a file, daring someone to pull it apart.
+
+If there is a message buried in there — in the static, in the distortion, in the silence between the bits —
+you’ll have to find it yourself.
+
+The clock is ticking.
+He’s waiting for someone to laugh.
