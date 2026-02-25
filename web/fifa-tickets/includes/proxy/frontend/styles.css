@@ -1,0 +1,259 @@
+
+        :root {
+            --bg-color: #0a0a0a;
+            --card-bg: #141414;
+            --text-color: #f0f0f0;
+            --border-color: #333;
+            --btn-bg: #ffffff;
+            --btn-text: #000000;
+            
+            --seat-vip: #ef4444;
+            --seat-premium: #f59e0b;
+            --seat-pro: #8b5cf6;
+            --seat-regular: #3b82f6;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        header { text-align: center; margin-bottom: 50px; }
+        h1 { 
+            font-weight: 600; 
+            font-size: 2rem; 
+            text-transform: uppercase; 
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+        h1 span { color: inherit; }
+        .match-info { 
+            font-size: 1rem; 
+            color: #888; 
+            font-weight: 300; 
+            letter-spacing: 0.5px;
+        }
+
+        .section-title {
+            color: #888; 
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            display: flex;
+            gap: 40px;
+            width: 100%;
+            max-width: 1200px;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+
+        .left-column-wrapper {
+            flex: 2;
+            min-width: 350px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .zones-container {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        .zone-card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            border-left: 3px solid transparent; 
+            transition: background-color 0.2s;
+        }
+        
+        .zone-card:hover {
+            background: #1a1a1a;
+        }
+
+        .zone-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .zone-title { font-weight: 600; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 0.5px; }
+        .zone-price { font-weight: 400; color: #888; font-size: 0.9rem; }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            background-color: #0a0a0a;
+            color: #fff;
+            border: 1px solid #333;
+            border-radius: 4px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.9rem;
+            cursor: pointer;
+            outline: none;
+        }
+        
+        select:focus { border-color: #fff; /* White focus instead of neon */ }
+        select:disabled { opacity: 0.4; cursor: not-allowed; }
+
+        /* Add Button - Clean White */
+        .action-area {
+            grid-column: span 2;
+            margin-top: 15px;
+        }
+
+        .add-btn {
+            width: 100%;
+            background-color: #ffffff;
+            color: #000;
+            font-weight: 600;
+            padding: 16px;
+            border: 1px solid #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            transition: opacity 0.2s;
+        }
+
+        .add-btn:hover { opacity: 0.9; }
+        .add-btn:active { transform: scale(0.99); }
+
+        .stadium-image-container {
+            flex: 1.5;
+            min-width: 250px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .stadium-image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            border: 1px solid #222;
+            display: block;
+            max-height: 600px; 
+            object-fit: contain;
+            background: #000;
+        }
+
+        .cart-panel {
+            flex: 1;
+            min-width: 300px;
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            height: fit-content;
+            margin-top: 30px; 
+        }
+
+        .cart-header { 
+            border-bottom: 1px solid #333; 
+            padding-bottom: 15px; 
+            margin-bottom: 15px; 
+        }
+        
+        .cart-header h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        
+        .cart-items { min-height: 100px; max-height: 400px; overflow-y: auto; }
+        
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            background: transparent;
+            margin-bottom: 5px;
+            border-bottom: 1px solid #222;
+        }
+        
+        .cart-item-details {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .color-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+
+        .ticket-code { font-weight: 600; font-size: 1rem; }
+        .ticket-tier { font-size: 0.8rem; color: #666; text-transform: uppercase; }
+
+        .remove-btn {
+            color: #666;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .remove-btn:hover { color: #fff; text-decoration: underline; }
+
+        .total-section {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .total-price { font-size: 1.5rem; font-weight: 600; color: #fff; }
+
+        .checkout-btn {
+            width: 100%;
+            padding: 16px;
+            margin-top: 20px;
+            background-color: #333;
+            color: #fff;
+            border: 1px solid #333;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background 0.2s;
+        }
+        .checkout-btn:hover { background-color: #444; border-color: #444; }
+
+        @media (max-width: 900px) {
+            .zones-container { grid-template-columns: 1fr; }
+            .action-area { grid-column: span 1; }
+            .container { gap: 20px; }
+            
+            .left-column-wrapper, .stadium-image-container, .cart-panel {
+                flex: 1 1 100%;
+            }
+            .cart-panel { margin-top: 0; }
+        }

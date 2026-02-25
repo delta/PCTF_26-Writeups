@@ -1,0 +1,4 @@
+Once upon a time, I built a simple application to manage personal notes.
+Most users can only access their own notes, but I reserved a few special features for myself, accessible only internally.
+
+Can you reach what you’re not supposed to?

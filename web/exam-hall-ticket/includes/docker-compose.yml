@@ -1,0 +1,31 @@
+services:
+  db:
+    image: postgres:16.4
+    container_name: postgres
+    environment: 
+      POSTGRES_USER: pctf
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: pctf
+      POSTGRES_INITDB_ARGS: "--encoding=EUC_TW --lc-collate=C --lc-ctype=C"
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U pctf"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    image: exam-hall-ticker:latest
+    build: ./backend 
+    container_name: backend 
+    ports: 
+      - "3000:3000"
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - ./backend:/backend
+      - /backend/node_modules

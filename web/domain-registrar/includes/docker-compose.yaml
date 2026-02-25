@@ -1,0 +1,24 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8008:80"
+    extra_hosts:
+      - "notflix.com:127.0.0.1"
+      - "metube.lol:127.0.0.1"
+      - "amazon.bez:127.0.0.1"
+      - "twitter.x:127.0.0.1"
+      - "google.meme:127.0.0.1"
+      - "nosebook.com:127.0.0.1"
+      - "instakilogram.com:127.0.0.1"
+      
+      - "toktik.rot:127.0.0.1"
+      - "microslop.io:127.0.0.1"
+      - "shatgpt.com:127.0.0.1"
+      - "shallowseek.lo:127.0.0.1"
+      - "novidia.gpu:127.0.0.1"
+      - "banana.mephone:127.0.0.1"
+      - "nikey.adi:127.0.0.1"
+      - "samnotsung.com:127.0.0.1"
+      - "chrome.ram:127.0.0.1"
+    restart: always

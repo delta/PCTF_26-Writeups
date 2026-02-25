@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GoPops - KYC Verification</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Identity Verification</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="form-panel">
+            <h3>Complete KYC to purchase domain</h3>
+            <p class="warning-text">Photo ID required for domain purchase.</p>
+            
+            <form id="kycForm">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" name="fullname" required>
+                </div>
+                <div class="form-group">
+                    <label>Pic</label>
+                    <input type="file" name="kyc_photo" accept="image/*" required>
+                    <small>Only .jpeg, .jpg and .png allowed.</small>
+                </div>
+                <button type="submit" class="btn-primary">Verify & Continue to Checkout</button>
+            </form>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

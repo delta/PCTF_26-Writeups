@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIFA World Cup 26™ | Seat Selection</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>FIFA World Cup <span>26</span></h1>
+        <div class="match-info">Finals: Portugal vs Argentina | Ohio Stadium</div>
+    </header>
+
+    <div class="container">
+        
+        <div class="left-column-wrapper">
+            <h3 class="section-title">Select Seats:</h3>
+
+            <div class="zones-container">
+                
+                <div class="zone-card" style="border-left-color: var(--seat-vip);">
+                    <div class="zone-header">
+                        <span class="zone-title">VIP</span>
+                        <span class="zone-price">$900</span>
+                    </div>
+                    <select id="select-vip" onchange="clearOthers('vip')">
+                        <option value="" disabled selected>Select Seat</option>
+                    </select>
+                </div>
+
+                <div class="zone-card" style="border-left-color: var(--seat-premium);">
+                    <div class="zone-header">
+                        <span class="zone-title">Premium</span>
+                        <span class="zone-price">$350</span>
+                    </div>
+                    <select id="select-premium" onchange="clearOthers('premium')">
+                        <option value="" disabled selected>Select Seat</option>
+                    </select>
+                </div>
+
+                <div class="zone-card" style="border-left-color: var(--seat-pro);">
+                    <div class="zone-header">
+                        <span class="zone-title">Pro</span>
+                        <span class="zone-price">$150</span>
+                    </div>
+                    <select id="select-pro" onchange="clearOthers('pro')">
+                        <option value="" disabled selected>Select Seat</option>
+                    </select>
+                </div>
+
+                <div class="zone-card" style="border-left-color: var(--seat-regular);">
+                    <div class="zone-header">
+                        <span class="zone-title">Regular</span>
+                        <span class="zone-price">$60</span>
+                    </div>
+                    <select id="select-regular" onchange="clearOthers('regular')">
+                        <option value="" disabled selected>Select Seat</option>
+                    </select>
+                </div>
+
+                <div class="action-area">
+                    <button id="add-btn" class="add-btn">Add to Selection</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="stadium-image-container">
+            <h3 class="section-title">Stadium Seating Map</h3>
+            <img src="map.png" alt="Stadium Seating Map">
+        </div>
+
+        <div class="cart-panel">
+            <div class="cart-header">
+                <h2>Your Tickets</h2>
+            </div>
+            
+            <div id="cart-items" class="cart-items">
+                <p style="color: #444; font-size: 0.9rem; text-align: center; padding: 20px;">No seats selected</p>
+            </div>
+
+            <div class="total-section">
+                <span>Total</span>
+                <span id="total-price" class="total-price">$0</span>
+            </div>
+ 
+            <button class="checkout-btn" onclick="checkout()">Checkout</button>        </div>
+    </div>
+
+   <script src="script.js"></script>
+</body>
+</html>

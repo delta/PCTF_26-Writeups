@@ -1,0 +1,66 @@
+
+syntax = "proto3";
+package fifa;
+option go_package = "fifa-chal/backend/gen;gen";
+enum SeatZone {
+    INVALID = 0;
+    REGULAR = 1;
+    PRO = 2;
+    PREMIUM = 3;
+    VIP = 4;
+}
+message ConfirmedTicket {
+    string flag = 1; 
+}
+
+message ValidateResponse {
+    bool valid = 1;
+    string portuguenese = 2;
+    string hmac = 3;
+}
+
+message SeatID {
+    string hash = 1;
+    SeatZone zone = 2;
+    bool is_reserved = 3;
+}
+
+message SeatRowRequest {
+    SeatZone zone = 1;
+}
+
+message SeatRowResponse {
+    repeated SeatID seats = 1;
+}
+
+message ReserveSeatRequest { 
+    bytes request = 1;
+}
+message FinalReserveSeatRequest {
+    string hash = 1;
+    SeatZone zone = 2;
+    string sessionToken = 3;
+}
+message ReserveSeatData {
+    string hash = 1;
+    SeatZone zone = 2;
+    string sessionToken = 3;
+}
+message ReserveSeatResponse {
+    bool success = 1;
+    string message = 2;
+    bytes ticket_data = 3; 
+}
+
+message FinalizedReserveSeatResponse {
+    bool success = 1;
+    string message = 2;
+    bytes ticket_data = 3; 
+}
+
+service SeatService {
+    rpc ListSeats(SeatRowRequest) returns (SeatRowResponse);
+    rpc ReserveSeat(ReserveSeatRequest) returns (ReserveSeatResponse);
+    rpc ValidateTicket(ConfirmedTicket) returns (ValidateResponse);
+    rpc FinalizeReservation(FinalReserveSeatRequest) returns (FinalizedReserveSeatResponse);
+}

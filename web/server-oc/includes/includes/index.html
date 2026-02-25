@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server OC Chal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <div>
+                <strong>Server OC</strong><br>
+                <small>Arghh, my load balancer isn't load balancing enough. Maybe OCing it will help..</small>
+            </div>
+        </div>
+
+        <div class="main-display">
+            <div class="cpu-box">
+                <div class="label">CPU_CORE_01</div>
+                <span id="multiplier-display">30x</span>
+                <div class="label">Core Multiplier</div>
+            </div>
+
+            <div class="log-container">
+                <div class="log-header">cmd</div>
+                <div id="log-content" class="log-content">
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <input type="number" id="input-multiplier" value="30" min="1" max="100" placeholder="Set Core Multiplier">
+            <button id="btn-overclock">Overclock</button>
+            <button id="btn-reset">Reset</button>
+            <button id="btn-be" style="display: none;">Run Benchmark</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

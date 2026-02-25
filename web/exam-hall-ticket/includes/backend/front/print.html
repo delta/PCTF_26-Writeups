@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Print Service</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="main-header">
+    <h1>Print Service</h1>
+</header>
+
+<main class="container">
+    <div class="queue-status-card">
+        <h3>Current Print Queue</h3>
+        <div class="queue-number" id="queueCount">Loading...</div>
+        <p id="queueMsg" class="info-text">Fetching live stats...</p>
+    </div>
+
+    <div id="uploadSection">
+        <h2>Upload Hall Ticket</h2>
+        <p class="hint-text">Make sure to print your hall ticket before going for the exam</p>
+        
+        <div class="upload-box">
+            <input type="file" id="pdfInput" accept="application/pdf">
+            <button id="uploadBtn" class="btn primary" onclick="uploadPDF()">Upload & Print</button>
+        </div>
+        <div id="uploadStatus" class="status-msg hidden"></div>
+    </div>
+
+    <div id="responseSection" class="response-box hidden">
+        <code id="response" class="response-code"></code>
+    </div>
+
+    <br>
+    <a href="index.html" class="btn link">Back to Home</a>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processing Payment | FIFA World Cup 26™</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0a0a0a;
+            --text-color: #f0f0f0;
+            --accent-color: #ffffff; 
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Outfit', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .loader-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 2px solid rgba(255, 255, 255, 0.1); 
+            border-top: 2px solid var(--accent-color);  
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        .loading-text {
+            font-size: 1rem;
+            letter-spacing: 2px;
+            font-weight: 300;
+            text-transform: uppercase;
+            animation: pulse 2s ease-in-out infinite; /* Slower, calmer pulse */
+        }
+
+        h1 {
+            position: absolute;
+            top: 40px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            color: #fff;
+            opacity: 0.8;
+        }
+
+        .subtext {
+            font-size: 0.85rem; 
+            color: #666; 
+            font-weight: 300;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>FIFA World Cup 26</h1>
+    <div class="loader-container">
+        <div class="spinner"></div>
+        <div class="loading-text">Processing Order</div>
+        <div class="subtext">Please do not refresh the page</div>
+    </div>
+
+</body>
+</html>

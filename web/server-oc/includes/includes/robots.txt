@@ -1,0 +1,3 @@
+CPU=Intel® Core™ i9-9900K
+Motherboard=Asus Z390 ROG MAXIMUS XI HERO
+

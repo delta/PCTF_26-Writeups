@@ -1,0 +1,36 @@
+{
+    "name": "app",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "packageManager": "pnpm@10.14.0",
+    "devDependencies": {
+        "@types/express": "^5.0.6"
+    },
+    "dependencies": {
+        "body-parser": "^2.2.1",
+        "cookie-parser": "^1.4.7",
+        "dotenv": "^17.2.3",
+        "express": "^5.2.1",
+        "express-session": "^1.18.2",
+        "file-type": "^21.3.0",
+        "helmet": "^8.1.0",
+        "memorystore": "^1.6.7",
+        "multer": "^2.0.2",
+        "puppeteer": "^24.34.0",
+        "sqlite3": "^5.1.7",
+        "uuid": "^13.0.0"
+    },
+    "pnpm": {
+        "onlyBuiltDependencies": [
+            "sqlite3"
+        ]
+    }
+}
