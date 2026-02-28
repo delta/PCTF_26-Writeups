@@ -1,4 +1,4 @@
-# CTF Write-up: Hall Ticket & Printer Queue
+# Hall Ticket chal - Write-up
 
 ## Challenge Summary
 This challenge revolves around a student trying to obtain and print their exam hall ticket through a multi-stage exploitation chain. The attack path begins with an encoding-based SQL injection (CVE-2025-1094) to modify the user's attendance record. Next, the attacker bypasses an artificially throttled download using HTTP Range requests. Finally, the attacker embeds a malicious XSS payload into the downloaded PDF's metadata, abusing a headless browser bot to hit an internal endpoint, clear the print queue, and retrieve the flag.
