@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Hall Ticket Portal</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="main-header">
+    <h1>Hall Ticket Portal</h1>
+    <p>Department of Examinations</p>
+</header>
+
+<main class="container">
+    <h2>Student Dashboard</h2>
+
+    <div id="profileCard" class="profile-card hidden">
+        <div class="profile-row">
+            <span class="label">Roll Number:</span>
+            <span id="displayRoll" class="value code-font">Loading...</span>
+        </div>
+        <div class="profile-row">
+            <span class="label">Attendance:</span>
+            <span id="displayAttendance" class="value">--%</span>
+        </div>
+        <div class="profile-row">
+            <span class="label">Status:</span>
+            <span id="displayStatus" class="badge">Checking...</span>
+        </div>
+    </div>
+
+    <div id="errorBox" class="result error-msg hidden"></div>
+
+    <div class="divider"></div>
+
+    <button id="downloadBtn" class="btn success hidden" onclick="downloadTicket()">
+        Download Hall Ticket (PDF)
+    </button>
+
+    <br><br>
+    <a href="index.html" class="btn link">Back to Home</a>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

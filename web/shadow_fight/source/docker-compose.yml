@@ -1,0 +1,10 @@
+name: shadow-fight
+services:
+  shadow-fight:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    ports:
+      - "3003:3001" # match this with env file

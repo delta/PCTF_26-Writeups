@@ -1,0 +1,24 @@
+{
+  "name": "server-oc-chal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "axios": "^1.13.2",
+    "dotenv": "^16.4.7",
+    "express": "^5.2.1",
+    "express-session": "^1.18.2",
+    "json": "^11.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "token": "^0.1.0",
+    "web": "^0.0.2"
+  }
+}

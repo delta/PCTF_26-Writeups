@@ -1,0 +1,14 @@
+name: "the-note-keeper"
+services:
+  client:
+    build: ./client
+    ports:
+      - "3004:3000"
+    environment:
+      - NODE_ENV=production
+    depends_on:
+      - backend
+
+  backend:
+    build: ./backend
+    env_file: ./backend/.env

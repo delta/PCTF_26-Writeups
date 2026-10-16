@@ -1,0 +1,13 @@
+name: picture-this
+services:
+  picture-this:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    ports:
+      - "3002:3000" # match this with env file
+    volumes:
+      - ./public:/app/public
+      - ./db:/app/db

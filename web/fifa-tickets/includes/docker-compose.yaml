@@ -1,0 +1,33 @@
+services:
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+
+  backend:
+    build: .        
+    image: fifa-tickets-backend
+    command: ./backend  
+    depends_on:
+      - redis
+    ports:
+      - "50051:50051"
+    environment:
+      - REDIS_ADDR=redis:6379
+    env_file:
+      - .env
+    restart: always
+
+  proxy:
+    build: .        
+    image: fifa-tickets-proxy
+    command: ./proxy   
+    depends_on:
+      - redis
+      - backend
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env
+    environment:
+      - REDIS_ADDR=redis:6379

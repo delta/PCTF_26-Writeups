@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GoPops - Checkout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Order Status</h1>
+        </div>
+    </header>
+
+    <main class="container" style="text-align: center; margin-top: 50px;">
+        <div class="form-panel">
+            <h2>Processing Result</h2>
+            <hr>
+            
+            <div id="resultMessage" style="margin: 20px 0; font-size: 1.1em; padding: 15px; background: #f9f9f9; border-radius: 4px;">
+                Loading status...
+            </div>
+            
+            <p>If your verification is successful, an invoice will be sent</p>
+            <a href="index.html" class="btn-secondary">Back to Home</a>
+        </div>
+    </main>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const msg = params.get('msg');
+        
+        const resultDiv = document.getElementById('resultMessage');
+        if (msg) {
+            resultDiv.innerHTML = decodeURIComponent(msg);
+        } else {
+            resultDiv.innerText = "No order information found.";
+        }
+    </script>
+</body>
+</html>
