@@ -1,0 +1,10 @@
+name: tac-tic-toe
+services:
+  tac-tic-toe:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    ports:
+      - "3000:3000" # match this with env file

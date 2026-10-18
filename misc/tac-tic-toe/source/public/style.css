@@ -1,0 +1,23 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  gap: 5px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.cell {
+  width: 80px;
+  height: 80px;
+  font-size: 48px;
+  background: #eee;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
